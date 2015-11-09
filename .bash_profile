@@ -1,6 +1,9 @@
 source ~/.nvm/nvm.sh
 nvm use v4.1.2
 
+# Don't clear screen from manpage after quit
+export MANPAGER="less -X";
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
