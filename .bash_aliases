@@ -10,12 +10,15 @@ alias gfu='git fetch upstream'
 alias gcf='git commit --fixup'
 alias grai='git rebase -i --autosquash'
 alias branchgrep="git for-each-ref --sort='-*committerdate' --format=\"%(refname:short)\" refs/heads/ | grep"
-alias disapprovingeyes='echo "ಠ_ಠ" | pbcopy'
-alias idkno='echo "¯\_(ツ)_/¯" | pbcopy'
 
 alias pyserve='python -m SimpleHTTPServer'
 
-alias vimprofile="vim ~/.bash_profile"
+alias viprofile="vim ~/.bash_profile"
+alias vialias="vim ~/.bash_aliases"
+alias vivi="vim ~/.vimrc"
+alias vissh="vim ~/.ssh/config"
 
 alias vi='vim'
 alias rebootprofile="source ~/.bash_profile"
+
+alias la='ls -al'
