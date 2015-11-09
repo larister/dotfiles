@@ -56,6 +56,12 @@ function checkoutgrep() {  head -"$@" | tail -1 | xargs git checkout ; }
 
 function xco(){ git checkout `branchgrep $1 | head -n1`;  }
 
+function forkclone() {
+  git clone git@github.com:larister/$1.git;
+  cd $1;
+  git remote add upstream git@github.com:BrandwatchLtd/$1.git;
+}
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
