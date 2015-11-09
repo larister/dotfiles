@@ -1,5 +1,5 @@
 source ~/.nvm/nvm.sh
-nvm use v0.10.39
+nvm use v4.1.2
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
