@@ -1,0 +1,32 @@
+[user]
+	name = Alastair Lockie
+	email = alastair@brandwatch.com
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[credential]
+	helper = osxkeychain
+[alias]
+    l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --graph
+	co = checkout
+	fa = fetch --all
+	lsd = ls-files --deleted
+	lsu = ls-files --other --exclude-standard
+	cano = commit --amend --no-edit
+	ca = commit --amend
+	cm = commit
+    lastchange = "!f() { git log -p --follow -n $1 $2; }; f"
+[merge]
+	tool = bcomp
+[mergetool]
+	prompt = false
+[mergetool "bcomp"]
+	cmd = "/usr/local/bin/bcomp" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+	trustExitCode = true
+[rerere]
+	enabled = true
+[core]
+	editor = vim
+[diff]
+	algorithm = patience
