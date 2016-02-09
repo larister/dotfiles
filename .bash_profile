@@ -1,6 +1,8 @@
 source ~/.nvm/nvm.sh
 nvm use v4.2.3
 
+# Use rbenv
+eval "$(rbenv init -)"
 
 # Don't clear screen from manpage after quit
 export MANPAGER="less -X";
