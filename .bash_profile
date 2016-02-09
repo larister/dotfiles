@@ -1,5 +1,6 @@
 source ~/.nvm/nvm.sh
-nvm use v4.1.2
+nvm use v4.2.3
+
 
 # Don't clear screen from manpage after quit
 export MANPAGER="less -X";
