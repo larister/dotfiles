@@ -11,6 +11,10 @@ alias gcf='git commit --fixup'
 alias grai='git rebase -i --autosquash'
 alias branchgrep="git for-each-ref --sort='-*committerdate' --format=\"%(refname:short)\" refs/heads/ | grep"
 
+bunshort() {
+    $1 | $(npm bin)/bunyan -o short
+}
+
 alias pyserve='python -m SimpleHTTPServer'
 
 alias viprofile="vim ~/.bash_profile"
