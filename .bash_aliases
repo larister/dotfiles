@@ -21,6 +21,7 @@ alias viprofile="vim ~/.bash_profile"
 alias vialias="vim ~/.bash_aliases"
 alias vivi="vim ~/.vimrc"
 alias vissh="vim ~/.ssh/config"
+alias vigit="vim .git/config"
 
 alias vi='vim'
 alias rebootprofile="source ~/.bash_profile"
