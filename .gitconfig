@@ -17,6 +17,7 @@
 	ca = commit --amend
 	cm = commit
     lastchange = "!f() { git log -p --follow -n $1 $2; }; f"
+	fu = fetch upstream
 [merge]
 	tool = bcomp
 [mergetool]
