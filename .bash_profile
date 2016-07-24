@@ -87,9 +87,11 @@ function unmark {
     rm -i "$MARKPATH/$1"
 }
 function marks {
-    ls -l "$MARKPATH" | gsed 's/  / /g' | gcut -d' ' -f9- | gsed 's/ -/\t-/g' && echo
+    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
 
 # added by Miniconda 3.7.0 installer
 export PATH="/Users/alastair/miniconda/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
