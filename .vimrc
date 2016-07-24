@@ -44,7 +44,8 @@ set expandtab
 " Line numbers
 set number
 set relativenumber
-autocmd InsertEnter * :set norelativenumber
+
+autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
 " Setup linting
