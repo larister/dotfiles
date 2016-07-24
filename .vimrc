@@ -48,6 +48,16 @@ set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+function! NumberToggle()
+      if(&relativenumber == 1)
+          set number
+      else
+          set relativenumber
+      endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
 " Setup linting
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
