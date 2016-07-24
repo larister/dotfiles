@@ -10,6 +10,8 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
