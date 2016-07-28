@@ -117,8 +117,17 @@ let g:vim_markdown_folding_disabled = 1
 " Remap keys
 inoremap kj <Esc>
 
-" leader+c copies to system clipboard
+" leader+c copies visual to system clipboard
 map <leader>c "+y
 
 " leader+n toggles nerdtree
 map <leader>n :NERDTreeToggle<CR>
+
+" copy relative path to system clipboard  (src/foo.txt)
+nnoremap <leader>cf :let @*=expand("%")<CR>
+" absolute path  (/something/src/foo.txt)
+nnoremap <leader>cF :let @*=expand("%:p")<CR>
+" filename       (foo.txt)
+nnoremap <leader>ct :let @*=expand("%:t")<CR>
+" directory name (/something/src)
+nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
