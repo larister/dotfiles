@@ -76,8 +76,35 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+" Use local eslint if possible
+function! SyntasticESlintChecker()
+  let l:npm_bin = ''
+  let l:eslint = 'eslint'
+
+  if executable('npm')
+      let l:npm_bin = split(system('npm bin'), '\n')[0]
+  endif
+
+  if strlen(l:npm_bin) && executable(l:npm_bin . '/eslint')
+    let l:eslint = l:npm_bin . '/eslint'
+  endif
+
+  let b:syntastic_javascript_eslint_exec = l:eslint
+endfunction
+
+"let g:syntastic_javascript_checkers = ["eslint"]
+
+autocmd FileType javascript :call SyntasticESlintChecker()
+
+
+" Add to airline
+let g:airline#extensions#syntastic#enabled = 1
+
 
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
