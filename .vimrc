@@ -109,6 +109,10 @@ let g:airline#extensions#syntastic#enabled = 1
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" Do not fold markdown
+let g:vim_markdown_folding_disabled = 1
+
+
 " Remap keys
 inoremap kj <Esc>
 map <leader>c "+y
