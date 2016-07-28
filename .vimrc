@@ -28,6 +28,12 @@ syntax on
 set background=dark
 colorscheme distinguished
 
+" Do not auto-add new lines
+set noeol
+
+" Do not wrap in middle of word
+set linebreak
+
 " Filetype plugins
 filetype plugin on
 
