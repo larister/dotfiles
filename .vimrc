@@ -13,6 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
