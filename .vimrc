@@ -12,6 +12,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -57,6 +58,9 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" Show statusline
+set laststatus=2
 
 " Setup linting
 set statusline+=%#warningmsg#
