@@ -115,4 +115,9 @@ let g:vim_markdown_folding_disabled = 1
 
 " Remap keys
 inoremap kj <Esc>
+
+" leader+c copies to system clipboard
 map <leader>c "+y
+
+" leader+n toggles nerdtree
+map <leader>n :NERDTreeToggle<CR>
