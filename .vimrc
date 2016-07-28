@@ -83,3 +83,4 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Remap keys
 inoremap kj <Esc>
+map <leader>c "+y
