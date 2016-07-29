@@ -8,6 +8,7 @@ Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'isruslan/vim-es6'
 Plug 'elzr/vim-json'
+Plug 'lfilho/cosco.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -113,6 +114,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
 
+" Setup cosco
+nnoremap <leader>; :CommaOrSemiColon<CR>
 
 " Remap keys
 inoremap kj <Esc>
