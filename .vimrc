@@ -100,8 +100,6 @@ function! SyntasticESlintChecker()
   let b:syntastic_javascript_eslint_exec = l:eslint
 endfunction
 
-"let g:syntastic_javascript_checkers = ["eslint"]
-
 autocmd FileType javascript :call SyntasticESlintChecker()
 
 
