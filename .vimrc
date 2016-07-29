@@ -16,6 +16,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
