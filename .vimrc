@@ -112,6 +112,9 @@ endfunction
 
 autocmd FileType javascript :call SyntasticESlintChecker()
 
+" Mouse scrolling
+:set mouse=a
+
 
 " Add to airline
 let g:airline#extensions#syntastic#enabled = 1
