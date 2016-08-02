@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'isruslan/vim-es6'
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'elzr/vim-json'
 Plug 'lfilho/cosco.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -41,6 +42,8 @@ set linebreak
 " Filetype plugins
 filetype plugin on
 
+" Mustache syntax for .template
+au BufNewFile,BufRead *.template set filetype=mustache
 " Setup highlighting
 set hlsearch
 set incsearch
