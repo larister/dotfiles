@@ -47,6 +47,10 @@ filetype plugin on
 
 " Mustache syntax for .template
 au BufNewFile,BufRead *.template set filetype=mustache
+
+" No swap files
+:set noswapfile
+
 " Setup highlighting
 set hlsearch
 set incsearch
