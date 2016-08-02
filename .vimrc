@@ -36,6 +36,9 @@ colorscheme distinguished
 " Do not auto-add new lines
 set noeol
 
+" Autoindent new lines
+set autoindent
+
 " Do not wrap in middle of word
 set linebreak
 
