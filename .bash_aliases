@@ -27,3 +27,5 @@ alias vi='vim'
 alias rebootprofile="source ~/.bash_profile"
 
 alias la='ls -al'
+
+alias dkr-clean='docker ps -aq | xargs docker rm -f && docker images --filter="dangling=true" -q | xargs docker rmi'
