@@ -39,6 +39,10 @@ set noeol
 " Autoindent new lines
 set autoindent
 
+" Nicer looking invisibles
+set listchars=tab:▸·,eol:¬
+highlight NonText ctermfg=8 guifg=#4a4a59
+
 " Do not wrap in middle of word
 set linebreak
 
@@ -56,11 +60,12 @@ set hlsearch
 set incsearch
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
-" Indentation
+" Tab stop (both normal and insert) of 4
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+" Expand tabs to spaces
+set noexpandtab
 
 " Line numbers
 set number
@@ -115,10 +120,8 @@ autocmd FileType javascript :call SyntasticESlintChecker()
 " Mouse scrolling
 :set mouse=a
 
-
 " Add to airline
 let g:airline#extensions#syntastic#enabled = 1
-
 
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
@@ -131,6 +134,9 @@ nnoremap <leader>; :CommaOrSemiColon<CR>
 
 " Remap keys
 inoremap kj <Esc>
+
+" leader+l toggles `set list` (show hidden invisibles)
+nmap <leader>l :set list!<CR>
 
 " leader+c copies visual to system clipboard
 map <leader>c "+y
