@@ -129,11 +129,16 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
 
+" Remap keys
+
+" Use comma as leader
+let mapleader = ","
+
+" kj to exit insert
+inoremap kj <Esc>
+
 " Setup cosco
 nnoremap <leader>; :CommaOrSemiColon<CR>
-
-" Remap keys
-inoremap kj <Esc>
 
 " leader+l toggles `set list` (show hidden invisibles)
 nmap <leader>l :set list!<CR>
