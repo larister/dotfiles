@@ -117,6 +117,8 @@ endfunction
 
 autocmd FileType javascript :call SyntasticESlintChecker()
 
+set suffixesadd+=.js
+
 " Mouse scrolling
 :set mouse=a
 
