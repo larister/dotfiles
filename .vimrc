@@ -122,8 +122,10 @@ set suffixesadd+=.js
 " Mouse scrolling
 :set mouse=a
 
-" Add to airline
+" Configure airline
 let g:airline#extensions#syntastic#enabled = 1
+" Install Roboto Light from https://github.com/powerline/fonts
+let g:airline_powerline_fonts = 1
 
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
