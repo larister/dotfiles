@@ -27,6 +27,19 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
+" open help in a new tab
+augroup HelpInTabs
+  autocmd!
+  autocmd BufEnter *.txt call HelpInNewTab()
+augroup END
+
+function! HelpInNewTab ()
+  if &buftype == 'help'
+    "Convert the help window to a tab...
+    execute "normal \<C-W>T"
+  endif
+endfunction
+
 " Set styling
 set t_Co=256
 syntax on
