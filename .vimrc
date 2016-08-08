@@ -139,6 +139,10 @@ set suffixesadd+=.js
 let g:airline#extensions#syntastic#enabled = 1
 " Install Roboto Light from https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
