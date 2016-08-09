@@ -81,7 +81,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 " Expand tabs to spaces
-set noexpandtab
+set expandtab
 
 " Line numbers
 set number
