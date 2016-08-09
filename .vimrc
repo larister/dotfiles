@@ -46,6 +46,9 @@ syntax on
 set background=dark
 colorscheme distinguished
 
+" Update quicksmart
+set updatetime=250
+
 " Do not auto-add new lines
 set noeol
 
