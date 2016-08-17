@@ -100,6 +100,22 @@ endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
 
+"@lfilho's Test This feature
+function! <SID>TestThis()
+    let originalCursorPosition = getpos('.')
+    let oldReg = getreg('z')
+    let oldSearch = getreg('/')
+    keepjumps normal! gg/describe('f'vi'"zy
+    " Use https://github.com/tpope/vim-dispatch later on:
+    "exec "!$(npm bin)/grunt mocha-phantom --reporter=dot --spec=" . getreg('z')
+    exec "!open http://localhost:3000/tests/?spec=" . getreg('z')
+    call setreg('z', oldReg)
+    call setreg('/', oldSearch)
+    call setpos('.', originalCursorPosition)
+endfunction
+
+command! TestThis call <SID>TestThis()
+
 " Show statusline
 set laststatus=2
 
@@ -163,6 +179,8 @@ inoremap kj <Esc>
 
 " Setup cosco
 nnoremap <leader>; :CommaOrSemiColon<CR>
+
+nnoremap <leader>t :TestThis<CR><CR>
 
 " leader+l toggles `set list` (show hidden invisibles)
 nmap <leader>l :set list!<CR>
