@@ -149,6 +149,8 @@ endfunction
 
 autocmd FileType javascript :call SyntasticESlintChecker()
 
+" Allow auto-finding files with gf
+set path+=public
 set suffixesadd+=.js
 
 " Mouse scrolling
