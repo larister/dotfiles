@@ -125,13 +125,13 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>768 416 384 129 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>729 1235 700 622 729 800 1920 1057 </string>
+	<string>290 117 700 622 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-922 970 796 473 -1191 800 1920 1057 </string>
+	<string>116 122 796 473 0 0 1280 777 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1191 810 1914 1047 -1191 800 1920 1057 </string>
+	<string>0 9 1263 768 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 325 570 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -892,7 +892,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>5BBB3733-4821-4FBC-A73C-81B365A7D877</string>
 	<key>NoSyncLastTipTime</key>
-	<real>491995779.10356301</real>
+	<real>492879171.550318</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -948,6 +948,13 @@
 		<string>0037</string>
 		<string>0038</string>
 		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -1019,9 +1026,9 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-05T00:34:53Z</date>
+	<date>2016-08-13T10:05:15Z</date>
 	<key>SavePasteHistory</key>
-	<false/>
+	<true/>
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
