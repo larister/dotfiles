@@ -193,6 +193,10 @@ map <leader>c "+y
 " leader+n toggles nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
+" map arrow keys to buffer switching
+map <Left> :bp<CR>
+map <Right> :bn<CR>
+
 " copy relative path to system clipboard  (src/foo.txt)
 nnoremap <leader>cf :let @*=expand("%")<CR>
 " absolute path  (/something/src/foo.txt)
