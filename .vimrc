@@ -132,22 +132,25 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
 " Use local eslint if possible
-function! SyntasticESlintChecker()
-  let l:npm_bin = ''
-  let l:eslint = 'eslint'
-
-  if executable('npm')
-      let l:npm_bin = split(system('npm bin'), '\n')[0]
-  endif
-
-  if strlen(l:npm_bin) && executable(l:npm_bin . '/eslint')
-    let l:eslint = l:npm_bin . '/eslint'
-  endif
-
-  let b:syntastic_javascript_eslint_exec = l:eslint
+function! CheckJavaScriptLinter(filepath, linter)
+	if exists('b:syntastic_checkers')
+		return
+	endif
+	if filereadable(a:filepath)
+		let b:syntastic_checkers = [a:linter]
+		let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
+	endif
 endfunction
 
-autocmd FileType javascript :call SyntasticESlintChecker()
+function! SetupJavaScriptLinter()
+	let l:current_folder = expand('%:p:h')
+	let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', l:current_folder), ':h')
+	let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
+	call CheckJavaScriptLinter(l:bin_folder . 'standard', 'standard')
+	call CheckJavaScriptLinter(l:bin_folder . 'eslint', 'eslint')
+endfunction
+
+autocmd FileType javascript call SetupJavaScriptLinter()
 
 " Allow auto-finding files with gf
 set path+=public
@@ -205,3 +208,7 @@ nnoremap <leader>cF :let @*=expand("%:p")<CR>
 nnoremap <leader>ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
+
+" debugging
+nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
+nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
