@@ -90,6 +90,7 @@ function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
+export COMPOSE_HTTP_TIMEOUT=10000
 
 # added by Miniconda 3.7.0 installer
 export PATH="/Users/alastair/miniconda/bin:$PATH"

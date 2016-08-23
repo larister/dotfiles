@@ -209,6 +209,7 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
-" debugging
+" debugging, use leader-DD to start, do a slow action, then leader-DQ to
+" finish. Your output will be in profile.log
 nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
 nnoremap <silent> <leader>DQ :exe ":profile pause"<cr>:noautocmd qall!<cr>
