@@ -74,7 +74,7 @@ au BufNewFile,BufRead *.template set filetype=mustache
 " Setup highlighting
 set hlsearch
 set incsearch
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-n> :<C-u>nohlsearch<CR>
 
 " Tab stop (both normal and insert) of 4
 set tabstop=4
@@ -97,8 +97,6 @@ function! NumberToggle()
           set relativenumber
       endif
 endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
 
 "@lfilho's Test This feature
 function! <SID>TestThis()
@@ -185,7 +183,14 @@ inoremap kj <Esc>
 " Setup cosco
 nnoremap <leader>; :CommaOrSemiColon<CR>
 
+" Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
+
+" Navigate windows more easily
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
 
 " leader+l toggles `set list` (show hidden invisibles)
 nmap <leader>l :set list!<CR>
