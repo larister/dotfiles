@@ -153,7 +153,7 @@ autocmd FileType javascript call SetupJavaScriptLinter()
 
 " Allow auto-finding files with gf
 set path+=public
-set suffixesadd+=.js
+set suffixesadd+=.js,.template
 
 " Mouse scrolling
 :set mouse=a
