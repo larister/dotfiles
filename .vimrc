@@ -18,6 +18,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
 
@@ -213,6 +214,8 @@ nnoremap <leader>cF :let @*=expand("%:p")<CR>
 nnoremap <leader>ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
+
+nmap <leader>f <Plug>CtrlSFPrompt
 
 " debugging, use leader-DD to start, do a slow action, then leader-DQ to
 " finish. Your output will be in profile.log
