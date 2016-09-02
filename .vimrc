@@ -202,6 +202,9 @@ map <leader>c "+y
 " leader+n toggles nerdtree
 map <leader>n :NERDTreeToggle<CR>
 
+" toggle paste
+set pastetoggle=<leader>p
+
 " map arrow keys to buffer switching
 map <Left> :bp<CR>
 map <Right> :bn<CR>
