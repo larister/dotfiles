@@ -1,5 +1,5 @@
 set nocompatible
- 
+
 " Install plugins
 call plug#begin('~/.vim/plugged')
 
@@ -156,7 +156,7 @@ set path+=public
 set suffixesadd+=.js,.template
 
 " Mouse scrolling
-:set mouse=a
+set mouse=a
 
 " Configure airline
 let g:airline#extensions#syntastic#enabled = 1
