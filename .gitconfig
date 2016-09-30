@@ -18,6 +18,8 @@
 	cm = commit
     lastchange = "!f() { git log -p --follow -n $1 $2; }; f"
 	fu = fetch upstream
+	please = push --force-with-lease
+	staash = stash --include-untracked
 [merge]
 	tool = bcomp
 [mergetool]
