@@ -127,11 +127,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>290 117 700 622 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>116 122 796 473 0 0 1280 777 </string>
+	<string>-857 1138 796 473 -1191 800 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 9 1263 768 0 0 1280 777 </string>
+	<string>-1191 825 1914 1032 -1191 800 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 325 570 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -892,7 +892,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>5BBB3733-4821-4FBC-A73C-81B365A7D877</string>
 	<key>NoSyncLastTipTime</key>
-	<real>492879171.550318</real>
+	<real>495642306.80600899</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -955,6 +955,25 @@
 		<string>0044</string>
 		<string>0045</string>
 		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -970,6 +989,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1026,7 +1047,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-13T10:05:15Z</date>
+	<date>2016-09-15T19:39:34Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -1076,6 +1097,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.5</string>
+	<string>3.0.7</string>
 </dict>
 </plist>
