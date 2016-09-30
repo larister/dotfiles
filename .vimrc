@@ -173,6 +173,12 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
 
+" Do not conceal with JSON
+let g:vim_json_syntax_conceal = 0
+
+" Show hidden files in NERDTree by default
+let g:NERDTreeShowHidden=1
+
 " Remap keys
 
 " Use comma as leader
