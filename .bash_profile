@@ -1,5 +1,5 @@
 source ~/.nvm/nvm.sh
-nvm use v6.3.1
+nvm use v6.7.0
 
 # Use rbenv
 eval "$(rbenv init -)"
