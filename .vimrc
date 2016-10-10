@@ -47,6 +47,9 @@ syntax on
 set background=dark
 colorscheme distinguished
 
+" Allow switching from an unsaved buffer
+set hidden
+
 " Update quicksmart
 set updatetime=250
 
