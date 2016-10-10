@@ -214,6 +214,15 @@ map <leader>n :NERDTreeToggle<CR>
 " toggle paste
 set pastetoggle=<leader>p
 
+" move lines logically
+map j gj
+map k gk
+
+" edit vimrc
+nmap <leader>ev :vsplit $MYVIMRC<CR>
+" reload vimrc
+nmap <leader>sv :source $MYVIMRC<CR>:AirlineRefresh<CR>
+
 " map arrow keys to buffer switching
 map <Left> :bp<CR>
 map <Right> :bn<CR>
