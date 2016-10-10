@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isruslan/vim-es6'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'elzr/vim-json'
@@ -168,7 +168,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Setup ctrlp"
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build'
 
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
