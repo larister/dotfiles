@@ -262,7 +262,10 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
-nmap <leader>f <Plug>CtrlSFPrompt
+nmap <leader>ff <Plug>CtrlSFPrompt
+nmap <leader>fo :CtrlSFOpen<CR>
+
+nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " debugging, use leader-DD to start, do a slow action, then leader-DQ to
 " finish. Your output will be in profile.log
