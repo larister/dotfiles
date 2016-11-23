@@ -125,13 +125,15 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>768 416 384 129 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>290 117 700 622 0 0 1280 777 </string>
+	<string>1339 1126 700 622 729 800 1920 1057 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>998 939 606 456 729 800 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-857 1138 796 473 -1191 800 1920 1057 </string>
+	<string>1063 1138 796 473 729 800 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 193 592 584 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1191 825 1914 1032 -1191 800 1920 1057 </string>
+	<string>729 804 1879 1053 729 800 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 325 570 452 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1047,7 +1049,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-09-15T19:39:34Z</date>
+	<date>2016-10-26T13:33:53Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>Show Toolbelt</key>
@@ -1055,7 +1057,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -1072,6 +1074,11 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+		<string>Captured Output</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
@@ -1097,6 +1104,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.7</string>
+	<string>3.0.10</string>
 </dict>
 </plist>
