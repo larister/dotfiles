@@ -14,6 +14,7 @@
 	lsd = ls-files --deleted
 	lsu = ls-files --other --exclude-standard
 	cano = commit --amend --no-edit
+    can = commit --amend --no-verify
 	ca = commit --amend
 	cm = commit
     lastchange = "!f() { git log -p --follow -n $1 $2; }; f"
