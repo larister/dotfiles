@@ -22,11 +22,14 @@ Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
 
-" Autoreload
-augroup reload_vimrc " {
-    autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
+" auto reload files
+set autoread
+
+" From vim sensible, better indentation/insert mode
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
 
 " open help in a new tab
 augroup HelpInTabs
