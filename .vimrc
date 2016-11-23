@@ -113,7 +113,7 @@ function! <SID>TestThis()
     keepjumps normal! gg/describe('f'vi'"zy
     " Use https://github.com/tpope/vim-dispatch later on:
     "exec "!$(npm bin)/grunt mocha-phantom --reporter=dot --spec=" . getreg('z')
-    exec "!open http://localhost:3000/tests/?spec=" . getreg('z')
+    exec "!open http://localhost:3000/tests/?reporter=standard\\&exactMatch=true\\&spec=" . getreg('z')
     call setreg('z', oldReg)
     call setreg('/', oldSearch)
     call setpos('.', originalCursorPosition)
