@@ -249,6 +249,9 @@ nmap <leader>sv :source $MYVIMRC<CR>:AirlineRefresh<CR>
 " map arrow keys to buffer switching
 map <Left> :bp<CR>
 map <Right> :bn<CR>
+" but ignore when in nerdtree/ctrlsf
+autocmd FileType nerdtree noremap <buffer> <Left> <nop>
+autocmd FileType nerdtree noremap <buffer> <Right> <nop>
 
 " copy relative path to system clipboard  (src/foo.txt)
 nnoremap <leader>cf :let @*=expand("%")<CR>
