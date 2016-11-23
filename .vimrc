@@ -265,6 +265,9 @@ nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 nmap <leader>ff <Plug>CtrlSFPrompt
 nmap <leader>fo :CtrlSFOpen<CR>
 
+nmap <leader>o o<C-[>k
+nmap <leader>O O<C-[>j
+
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " debugging, use leader-DD to start, do a slow action, then leader-DQ to
