@@ -74,7 +74,7 @@ WHITE="\[\033[0;37m\]"
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1="$RED\$(date +%H:%M) \W$YELLOW \$(__git_ps1 '(%s)')$WHITE \$ "
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:/usr/local/sbin:$PATH
 
 export MARKPATH=$HOME/.marks
 function leap { 
