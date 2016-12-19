@@ -19,6 +19,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dyng/ctrlsf.vim'
+Plug 'qpkorr/vim-bufkill'
+Plug 'bkad/CamelCaseMotion'
 
 call plug#end()
 
@@ -267,6 +269,9 @@ nmap <leader>fo :CtrlSFOpen<CR>
 
 nmap <leader>o o<C-[>k
 nmap <leader>O O<C-[>j
+
+" use camel case motion
+call camelcasemotion#CreateMotionMappings('<leader>')
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
