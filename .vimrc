@@ -141,37 +141,36 @@ let g:syntastic_javascript_checkers = ['eslint']
 " Use local eslint if possible
 " (http://nunes.io/notes/guide/vim-how-to-setup-eslint/)
 function! CheckJavaScriptLinter(filepath, linter)
-	if exists('b:syntastic_checkers')
-		return
-	endif
-	if filereadable(a:filepath)
-		let b:syntastic_checkers = [a:linter]
-		let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
-        return 1
-	endif
-endfunction
-
-function! CheckCurrentFolder(current_folder)
-	let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', a:current_folder), ':h')
-	let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
-	let l:standardlinter = CheckJavaScriptLinter(l:bin_folder . 'standard', 'standard')
-	let l:eslintlinter = CheckJavaScriptLinter(l:bin_folder . 'eslint', 'eslint')
-    if l:standardlinter
+    if exists('b:syntastic_checkers')
         return
     endif
-    if l:eslintlinter
+    if filereadable(a:filepath)
+        let b:syntastic_checkers = [a:linter]
+        let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
+        return 1
+    endif
+endfunction
+
+function! CheckFolderForJSLinter(current_folder)
+    let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', a:current_folder), ':h')
+    let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
+
+    if CheckJavaScriptLinter(l:bin_folder . 'standard', 'standard')
+        return
+    endif
+    if CheckJavaScriptLinter(l:bin_folder . 'eslint', 'eslint')
         return
     endif
     if a:current_folder == '/'
         return
     endif
-    let l:new_folder = fnamemodify(a:current_folder, ':h')
-    call CheckCurrentFolder(l:new_folder)
+
+    call CheckFolderForJSLinter(fnamemodify(a:current_folder, ':h'))
 endfunction
 
 function! SetupJavaScriptLinter()
-	let l:current_folder = expand('%:p:h')
-    call CheckCurrentFolder(l:current_folder)
+    let l:current_folder = expand('%:p:h')
+    call CheckFolderForJSLinter(l:current_folder)
 endfunction
 
 autocmd FileType javascript call SetupJavaScriptLinter()
@@ -205,7 +204,7 @@ let g:vim_json_syntax_conceal = 0
 " Show hidden files in NERDTree by default
 let g:NERDTreeShowHidden=1
 
-" Use Q to intelligently close a window 
+" Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
 function! CloseWindowOrKillBuffer()
