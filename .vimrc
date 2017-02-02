@@ -21,6 +21,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'dyng/ctrlsf.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'bkad/CamelCaseMotion'
+Plug 'danro/rename.vim'
 
 call plug#end()
 
