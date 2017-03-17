@@ -33,3 +33,5 @@ alias dc='docker-compose'
 
 alias dkr-clean='docker ps -aq | xargs docker rm -f && docker images --filter="dangling=true" -q | xargs docker rmi'
 alias dkr-blat='docker ps -aq | xargs docker rm -f && docker images -q | xargs docker rmi -f'
+
+alias gpg="gpg2"
