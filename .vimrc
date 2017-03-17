@@ -22,6 +22,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
+Plug 'bronson/vim-visual-star-search'
 
 call plug#end()
 
@@ -204,6 +205,8 @@ let g:vim_json_syntax_conceal = 0
 
 " Show hidden files in NERDTree by default
 let g:NERDTreeShowHidden=1
+
+let g:NERDTreeQuitOnOpen = 1
 
 " Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
