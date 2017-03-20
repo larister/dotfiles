@@ -18,6 +18,9 @@ export HISTCONTROL=ignoreboth
 
 export HISTTIMEFORMAT="%F %T "
 
+# Add keys to keychain
+ssh-add -A
+
 # GPG
 export GPG=gpg2
 
@@ -31,8 +34,6 @@ shopt -s histappend
 shopt -s checkwinsize
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -68,6 +69,7 @@ function forkclone() {
   git remote add upstream git@github.com:BrandwatchLtd/$1.git;
 }
 
+# Set up prompt
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
