@@ -24,6 +24,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
 Plug 'bronson/vim-visual-star-search'
 Plug 'sjl/gundo.vim'
+Plug 'valloric/youcompleteme'
 
 call plug#end()
 
@@ -117,7 +118,8 @@ function! <SID>TestThis()
     let originalCursorPosition = getpos('.')
     let oldReg = getreg('z')
     let oldSearch = getreg('/')
-    keepjumps normal! gg/describe('f'vi'"zy
+    keepjumps normal! gg/describe('
+f'vi'"zy
     " Use https://github.com/tpope/vim-dispatch later on:
     "exec "!$(npm bin)/grunt mocha-phantom --reporter=dot --spec=" . getreg('z')
     exec "!open http://localhost:3000/tests/?reporter=standard\\&exactMatch=true\\&spec=" . fnameescape(getreg('z'))
@@ -262,6 +264,9 @@ endfunction
 
 " Use comma as leader
 let mapleader = ","
+
+" Set backspace to reverse scan line for char (originally comma)
+nnoremap \ ,
 
 " kj to exit insert
 inoremap kj <Esc>
