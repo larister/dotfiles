@@ -23,6 +23,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
 Plug 'bronson/vim-visual-star-search'
+Plug 'sjl/gundo.vim'
 
 call plug#end()
 
@@ -75,8 +76,8 @@ highlight NonText ctermfg=8 guifg=#4a4a59
 " Do not wrap in middle of word
 set linebreak
 
-" Filetype plugins
-filetype plugin on
+filetype plugin on " Filetype plugins
+filetype indent on " Filetype indent
 
 " Mustache syntax for .template
 au BufNewFile,BufRead *.template set filetype=mustache
@@ -271,6 +272,9 @@ nnoremap <leader>; :CommaOrSemiColon<CR>
 " Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
 
+" Gundo toggle
+nnoremap <leader>u :GundoToggle<CR>
+
 " Navigate windows more easily
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
@@ -292,6 +296,9 @@ set pastetoggle=<leader>p
 " move lines logically
 map j gj
 map k gk
+
+" highlight last inserted text
+nnoremap gV `[v`] 
 
 " edit vimrc
 nmap <leader>ev :vsplit $MYVIMRC<CR>
