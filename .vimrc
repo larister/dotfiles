@@ -26,14 +26,16 @@ Plug 'bronson/vim-visual-star-search'
 
 call plug#end()
 
-" auto reload files
-set autoread
+set autoread " auto reload files
 
 " From vim sensible, better indentation/insert mode
 set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set smarttab
+
+set cursorline " highlight current line
+set wildmenu " visual autocomplete for command menu
 
 " open help in a new tab
 augroup HelpInTabs
