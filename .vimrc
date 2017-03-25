@@ -3,8 +3,10 @@ set nocompatible
 " Install plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+"Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isruslan/vim-es6'
 Plug 'mustache/vim-mustache-handlebars'
@@ -25,6 +27,8 @@ Plug 'danro/rename.vim'
 Plug 'bronson/vim-visual-star-search'
 Plug 'sjl/gundo.vim'
 Plug 'valloric/youcompleteme'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -201,17 +205,25 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build'
 let g:ctrlp_open_multiple_files = 'ij'
-
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
-
 " Do not conceal with JSON
 let g:vim_json_syntax_conceal = 0
-
 " Show hidden files in NERDTree by default
-let g:NERDTreeShowHidden=1
-
+let g:NERDTreeShowHidden= 1
+" Close NERDTree when a file is selected
 let g:NERDTreeQuitOnOpen = 1
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsSnippetsDir = "~/.vim/UltiSnips"
 
 " Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
@@ -279,6 +291,9 @@ nnoremap <leader>t :TestThis<CR><CR>
 
 " Gundo toggle
 nnoremap <leader>u :GundoToggle<CR>
+
+" highlight last inserted text
+nnoremap gV `[v`]
 
 " Navigate windows more easily
 nnoremap <C-h> <C-w><C-h>
