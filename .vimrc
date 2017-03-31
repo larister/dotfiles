@@ -40,7 +40,6 @@ set backspace=indent,eol,start
 set complete-=i
 set smarttab
 
-set cursorline " highlight current line
 set wildmenu " visual autocomplete for command menu
 
 " open help in a new tab
@@ -216,6 +215,7 @@ let g:NERDTreeQuitOnOpen = 1
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 0
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
@@ -308,6 +308,7 @@ map <leader>c "+y
 
 " leader+n toggles nerdtree
 map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
 
 " toggle paste
 set pastetoggle=<leader>p
@@ -317,7 +318,7 @@ map j gj
 map k gk
 
 " highlight last inserted text
-nnoremap gV `[v`] 
+nnoremap gV `[v`]
 
 " edit vimrc
 nmap <leader>ev :vsplit $MYVIMRC<CR>
