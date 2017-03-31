@@ -120,14 +120,13 @@ endfunc
 "@lfilho's Test This feature
 function! <SID>TestThis()
     let originalCursorPosition = getpos('.')
-    let oldReg = getreg('z')
+    let oldReg = getreg('y')
     let oldSearch = getreg('/')
-    keepjumps normal! gg/describe('
-f'vi'"zy
+    keepjumps normal! gg/describe('f'vi'"yy
     " Use https://github.com/tpope/vim-dispatch later on:
     "exec "!$(npm bin)/grunt mocha-phantom --reporter=dot --spec=" . getreg('z')
-    exec "!open http://localhost:3000/tests/?reporter=standard\\&exactMatch=true\\&spec=" . fnameescape(getreg('z'))
-    call setreg('z', oldReg)
+    exec "!open http://localhost:3000/tests/?reporter=standard\\&exactMatch=true\\&spec=" . fnameescape(getreg('y'))
+    call setreg('y', oldReg)
     call setreg('/', oldSearch)
     call setpos('.', originalCursorPosition)
 endfunction
