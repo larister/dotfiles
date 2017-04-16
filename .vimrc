@@ -29,6 +29,8 @@ Plug 'sjl/gundo.vim'
 Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -146,6 +148,13 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_disabled_filetypes=['sass']
+
+" Annoyingly have to quiet messages as per https://github.com/mustache/vim-mustache-handlebars/issues/6#issuecomment-56907305
+let g:syntastic_html_tidy_ignore_errors = ['plain text isn''t allowed in <head> elements']
+" if the above doesn't work then try
+" let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
+
 
 " Use local eslint if possible
 " (http://nunes.io/notes/guide/vim-how-to-setup-eslint/)
@@ -215,7 +224,7 @@ let g:NERDTreeQuitOnOpen = 1
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
@@ -239,7 +248,7 @@ function! CloseWindowOrKillBuffer()
   if number_of_windows_to_this_buffer > 1
     wincmd c
   else
-    bdelete
+    Bclose
   endif
 endfunction
 
