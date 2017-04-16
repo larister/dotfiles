@@ -98,6 +98,11 @@ function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
+# Short fn for isolating frontend analytics pids; pipe to xargs kill
+function frontendPs {
+    ps aux | grep "[n]ode [worker|server]" | tr -s " " | cut -d " " -f 2
+}
+
 export COMPOSE_HTTP_TIMEOUT=10000
 
 # added by Miniconda 3.7.0 installer
