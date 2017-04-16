@@ -3,6 +3,7 @@ set nocompatible
 " Install plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'bronson/vim-visual-star-search'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -24,7 +25,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'qpkorr/vim-bufkill'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
-Plug 'bronson/vim-visual-star-search'
 Plug 'sjl/gundo.vim'
 Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
