@@ -6,8 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bronson/vim-visual-star-search'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isruslan/vim-es6'
 Plug 'mustache/vim-mustache-handlebars'
@@ -146,62 +145,6 @@ command! TestThis call <SID>TestThis()
 " Show statusline
 set laststatus=2
 
-" Setup linting
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_disabled_filetypes=['sass']
-
-" Annoyingly have to quiet messages as per https://github.com/mustache/vim-mustache-handlebars/issues/6#issuecomment-56907305
-let g:syntastic_html_tidy_ignore_errors = ['plain text isn''t allowed in <head> elements']
-" if the above doesn't work then try
-" let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
-
-
-" Use local eslint if possible
-" (http://nunes.io/notes/guide/vim-how-to-setup-eslint/)
-function! CheckJavaScriptLinter(filepath, linter)
-    if exists('b:syntastic_checkers')
-        return
-    endif
-    if filereadable(a:filepath)
-        let b:syntastic_checkers = [a:linter]
-        let {'b:syntastic_' . a:linter . '_exec'} = a:filepath
-        return 1
-    endif
-endfunction
-
-function! CheckFolderForJSLinter(current_folder)
-    let l:bin_folder = fnamemodify(syntastic#util#findFileInParent('package.json', a:current_folder), ':h')
-    let l:bin_folder = l:bin_folder . '/node_modules/.bin/'
-
-    if CheckJavaScriptLinter(l:bin_folder . 'standard', 'standard')
-        return
-    endif
-    if CheckJavaScriptLinter(l:bin_folder . 'eslint', 'eslint')
-        return
-    endif
-    if a:current_folder == '/'
-        return
-    endif
-
-    call CheckFolderForJSLinter(fnamemodify(a:current_folder, ':h'))
-endfunction
-
-function! SetupJavaScriptLinter()
-    let l:current_folder = expand('%:p:h')
-    call CheckFolderForJSLinter(l:current_folder)
-endfunction
-
-autocmd FileType javascript call SetupJavaScriptLinter()
-
 " Allow auto-finding files with gf
 set path+=public
 set suffixesadd+=.js,.template
@@ -308,6 +251,9 @@ nnoremap <leader>t :TestThis<CR><CR>
 
 " Gundo toggle
 nnoremap <leader>u :GundoToggle<CR>
+
+nmap <silent> <leader>R <Plug>(ale_previous_wrap)
+nmap <silent> <leader>r <Plug>(ale_next_wrap)
 
 " highlight last inserted text
 nnoremap gV `[v`]
