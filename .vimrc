@@ -240,9 +240,6 @@ let mapleader = ","
 " Set backspace to reverse scan line for char (originally comma)
 nnoremap \ ,
 
-" kj to exit insert
-inoremap kj <Esc>
-
 " Setup cosco
 nnoremap <leader>; :CommaOrSemiColon<CR>
 
