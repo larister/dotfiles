@@ -1,5 +1,5 @@
 source ~/.nvm/nvm.sh
-nvm use v6.7.0
+nvm use v6.9.4
 
 # Use rbenv
 eval "$(rbenv init -)"
@@ -83,6 +83,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 PS1="$RED\$(date +%H:%M) \W$YELLOW \$(__git_ps1 '(%s)')$WHITE \$ "
 
 export PATH=~/bin:/usr/local/sbin:$PATH
+export PATH="$PATH:`yarn global bin`"
 
 export MARKPATH=$HOME/.marks
 function leap { 
