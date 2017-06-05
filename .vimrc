@@ -234,8 +234,8 @@ endfunction
 
 " Remap keys
 
-" Use comma as leader
-let mapleader = ","
+" Use space as leader
+let g:mapleader = "\<Space>"
 
 " Set backspace to reverse scan line for char (originally comma)
 nnoremap \ ,
@@ -262,33 +262,30 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 
 " leader+l toggles `set list` (show hidden invisibles)
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 
 " leader+c copies visual to system clipboard
-map <leader>c "+y
+noremap <leader>c "+y
 
 " leader+n toggles nerdtree
-map <leader>n :NERDTreeToggle<CR>
-map <leader>N :NERDTreeFind<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>N :NERDTreeFind<CR>
 
 " toggle paste
-set pastetoggle=<leader>p
+nnoremap <leader>p :set paste!<CR>
 
 " move lines logically
-map j gj
-map k gk
-
-" highlight last inserted text
-nnoremap gV `[v`]
+noremap j gj
+noremap k gk
 
 " edit vimrc
-nmap <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 " reload vimrc
-nmap <leader>sv :source $MYVIMRC<CR>:AirlineRefresh<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>:AirlineRefresh<CR>
 
 " map arrow keys to buffer switching
-map <Left> :bp<CR>
-map <Right> :bn<CR>
+nnoremap <Left> :bp<CR>
+nnoremap <Right> :bn<CR>
 " but ignore when in nerdtree/ctrlsf
 autocmd FileType nerdtree noremap <buffer> <Left> <nop>
 autocmd FileType nerdtree noremap <buffer> <Right> <nop>
@@ -303,15 +300,15 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
 nmap <leader>ff <Plug>CtrlSFPrompt
-nmap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>fo :CtrlSFOpen<CR>
 
-nmap <leader>o o<C-[>k
-nmap <leader>O O<C-[>j
+noremap <leader>o o<C-[>k
+noremap <leader>O O<C-[>j
 
 " use camel case motion
 call camelcasemotion#CreateMotionMappings('<leader>')
 
-nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+noremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 " debugging, use leader-DD to start, do a slow action, then leader-DQ to
 " finish. Your output will be in profile.log
