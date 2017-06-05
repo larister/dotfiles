@@ -11,6 +11,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'isruslan/vim-es6'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'mxw/vim-jsx'
 Plug 'elzr/vim-json'
 Plug 'lfilho/cosco.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -117,6 +118,8 @@ function! NumberToggle()
           set relativenumber
       endif
 endfunc
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 "@lfilho's Test This feature
 function! <SID>TestThis()
