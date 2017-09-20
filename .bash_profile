@@ -24,9 +24,6 @@ ssh-add -A
 # GPG
 export GPG=gpg2
 
-# Use python3
-export python=python3
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -117,3 +114,6 @@ if [ -f '/Users/alastair/google-cloud-sdk/path.bash.inc' ]; then source '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/alastair/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alastair/google-cloud-sdk/completion.bash.inc'; fi
+
+# Use Python 3 by default (relies on conda being installed, and a 3_6 environment)
+source activate 3_6
