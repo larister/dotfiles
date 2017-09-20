@@ -119,6 +119,11 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
+" Remove JSHint from ale linters
+let g:ale_linters = {
+\    'javascript': ['eslint', 'flow', 'standard', 'prettier', 'prettier-eslint', 'xo']
+\}
+
 function! NumberToggle()
       if(&relativenumber == 1)
           set number
@@ -156,7 +161,7 @@ set suffixesadd+=.js,.template
 set mouse=a
 
 " Configure airline
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 " Install Roboto Light from https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 " Enable the list of buffers
@@ -252,6 +257,7 @@ nnoremap <leader>t :TestThis<CR><CR>
 " Gundo toggle
 nnoremap <leader>u :GundoToggle<CR>
 
+" Ale previous/next
 nmap <silent> <leader>R <Plug>(ale_previous_wrap)
 nmap <silent> <leader>r <Plug>(ale_next_wrap)
 
