@@ -264,6 +264,8 @@ nmap <silent> <leader>r <Plug>(ale_next_wrap)
 " highlight last inserted text
 nnoremap gV `[v`]
 
+nmap <silent> <C-_> <Plug>(pydocstring)
+
 " Navigate windows more easily
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
