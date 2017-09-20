@@ -35,4 +35,8 @@ alias dkr-clean='docker ps -aq | xargs docker rm -f && docker images --filter="d
 alias dkr-blat='docker ps -aq | xargs docker rm -f && docker images -q | xargs docker rmi -f'
 
 alias gpg="gpg2"
-alias python="python3"
+
+# conda activate environment
+alias csa="source activate"
+
+alias jup="jupyter notebook"
