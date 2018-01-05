@@ -102,10 +102,12 @@ function frontendPs {
     ps aux | grep "[n]ode [worker|server]" | tr -s " " | cut -d " " -f 2
 }
 
+eval "$(pipenv --completion)"
+
 export COMPOSE_HTTP_TIMEOUT=10000
 
-# added by Miniconda 3.7.0 installer
-export PATH="/Users/alastair/miniconda/bin:$PATH"
+# Add spark to path
+export PATH="/Users/alastair/code/spark-2.2.0-bin-custom-spark/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
@@ -115,5 +117,4 @@ if [ -f '/Users/alastair/google-cloud-sdk/path.bash.inc' ]; then source '/Users/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/alastair/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alastair/google-cloud-sdk/completion.bash.inc'; fi
 
-# Use Python 3 by default (relies on conda being installed, and a 3_6 environment)
-source activate 3_6
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
