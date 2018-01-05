@@ -16,6 +16,7 @@ bunshort() {
 }
 
 alias pyserve='python -m SimpleHTTPServer'
+alias py='python3'
 
 alias viprofile="vim ~/.bash_profile"
 alias vialias="vim ~/.bash_aliases"
