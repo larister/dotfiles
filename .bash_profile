@@ -1,8 +1,5 @@
-source ~/.nvm/nvm.sh
-nvm use v8.9.2
-
-# Use rbenv
-eval "$(rbenv init -)"
+# Use rbenv - move to aliases?
+# eval "$(rbenv init -)"
 
 # Don't clear screen from manpage after quit
 export MANPAGER="less -X";
@@ -102,7 +99,16 @@ function frontendPs {
     ps aux | grep "[n]ode [worker|server]" | tr -s " " | cut -d " " -f 2
 }
 
-eval "$(pipenv --completion)"
+# This really slows things down :-/
+# eval "$(pipenv --completion)"
+
+# Enter pipenv shell when encountering a Pipfile
+function cd {
+    builtin cd "$@"
+    if [ -f "Pipfile" ] ; then
+        pipenv shell
+    fi
+}  
 
 export COMPOSE_HTTP_TIMEOUT=10000
 
