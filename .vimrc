@@ -286,8 +286,11 @@ nnoremap <leader>N :NERDTreeFind<CR>
 nnoremap <leader>p :set paste!<CR>
 
 " move lines logically
-noremap j gj
-noremap k gk
+nnoremap j gj
+nnoremap k gk
+
+nnoremap gj j
+nnoremap gk k
 
 " edit vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
