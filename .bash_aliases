@@ -37,7 +37,7 @@ alias dkr-blat='docker ps -aq | xargs docker rm -f && docker images -q | xargs d
 
 alias gpg="gpg2"
 
-# conda activate environment
-alias csa="source activate"
-
 alias jup="jupyter notebook"
+ 
+# Activate nvm and use latest version of node
+alias nod="source ~/.nvm/nvm.sh && nvm use v8.9.2"
