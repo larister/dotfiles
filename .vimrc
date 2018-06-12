@@ -34,11 +34,10 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'heavenshell/vim-pydocstring'
+Plug 'djoshea/vim-autoread'
 Plug 'mattn/emmet-vim'
 
 call plug#end()
-
-set autoread " auto reload files
 
 " From vim sensible, better indentation/insert mode
 set autoindent
