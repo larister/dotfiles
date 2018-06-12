@@ -264,6 +264,9 @@ autocmd FileType javascript,css nmap <silent> <Leader>; <Plug>(cosco-commaOrSemi
 " Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
 
+" Delete all lines within nearest curly braces block (inclusive)
+nnoremap <leader>df dVa{
+nnoremap <leader>yf yVa{
 
 " Ale previous/next
 nmap <silent> <leader>R <Plug>(ale_previous_wrap)
