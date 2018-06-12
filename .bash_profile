@@ -15,6 +15,8 @@ export HISTCONTROL=ignoreboth
 
 export HISTTIMEFORMAT="%F %T "
 
+export EDITOR=vim
+
 # Add keys to keychain
 ssh-add -A
 
