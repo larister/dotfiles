@@ -107,14 +107,6 @@ function frontendPs {
 # This really slows things down :-/
 # eval "$(pipenv --completion)"
 
-# Enter pipenv shell when encountering a Pipfile
-function cd {
-    builtin cd "$@"
-    if [ -f "Pipfile" ] ; then
-        pipenv shell
-    fi
-}  
-
 export COMPOSE_HTTP_TIMEOUT=10000
 
 # Add spark to path
@@ -129,3 +121,5 @@ if [ -f '/Users/alastair/google-cloud-sdk/path.bash.inc' ]; then source '/Users/
 if [ -f '/Users/alastair/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alastair/google-cloud-sdk/completion.bash.inc'; fi
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PIP_REQUIRE_VIRTUALENV=true
