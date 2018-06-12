@@ -258,9 +258,6 @@ endfunction
 " Use space as leader
 let g:mapleader = "\<Space>"
 
-" Set backspace to reverse scan line for char (originally comma)
-nnoremap \ ,
-
 " Setup cosco
 nnoremap <leader>; :CommaOrSemiColon<CR>
 
