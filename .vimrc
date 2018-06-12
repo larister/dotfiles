@@ -259,7 +259,8 @@ endfunction
 let g:mapleader = "\<Space>"
 
 " Setup cosco
-nnoremap <leader>; :CommaOrSemiColon<CR>
+autocmd FileType javascript,css nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
+
 
 " Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
