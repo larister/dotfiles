@@ -325,7 +325,11 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
 nmap <leader>ff <Plug>CtrlSFPrompt
+nmap <leader>fw <Plug>CtrlSFPrompt<C-R><C-W>
 nnoremap <leader>fo :CtrlSFOpen<CR>
+
+" Usage - * then change word and then run
+nnoremap <leader>r :%s//<C-R><C-W>/gc \| nohl<CR>
 
 noremap <leader>o o<C-[>k
 noremap <leader>O O<C-[>j
