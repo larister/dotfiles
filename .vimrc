@@ -28,7 +28,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'dyng/ctrlsf.vim'
 Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
-Plug 'sjl/gundo.vim'
 Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
@@ -265,8 +264,6 @@ autocmd FileType javascript,css nmap <silent> <Leader>; <Plug>(cosco-commaOrSemi
 " Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
 
-" Gundo toggle
-nnoremap <leader>u :GundoToggle<CR>
 
 " Ale previous/next
 nmap <silent> <leader>R <Plug>(ale_previous_wrap)
