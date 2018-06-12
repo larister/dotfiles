@@ -36,6 +36,9 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'djoshea/vim-autoread'
 Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 call plug#end()
 
@@ -123,6 +126,16 @@ autocmd InsertLeave * :set relativenumber
 let g:ale_linters = {
 \    'javascript': ['eslint', 'flow', 'standard', 'prettier', 'prettier-eslint', 'xo']
 \}
+
+let g:prettier#autoformat = 0
+let g:prettier#quickfix_auto_focus = 0
+let g:prettier#config#tab_width = 4
+let g:prettier#config#print_width = 140
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
 
 function! NumberToggle()
       if(&relativenumber == 1)
