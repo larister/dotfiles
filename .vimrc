@@ -26,7 +26,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dyng/ctrlsf.vim'
-Plug 'bkad/CamelCaseMotion'
 Plug 'danro/rename.vim'
 Plug 'valloric/youcompleteme'
 Plug 'sirver/ultisnips'
@@ -333,9 +332,6 @@ nnoremap <leader>r :%s//<C-R><C-W>/gc \| nohl<CR>
 
 noremap <leader>o o<C-[>k
 noremap <leader>O O<C-[>j
-
-" use camel case motion
-call camelcasemotion#CreateMotionMappings('<leader>')
 
 noremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
