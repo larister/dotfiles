@@ -263,13 +263,12 @@ autocmd FileType javascript,css nmap <silent> <Leader>; <Plug>(cosco-commaOrSemi
 " Mocha tests
 nnoremap <leader>t :TestThis<CR><CR>
 
-" Delete all lines within nearest curly braces block (inclusive)
-nnoremap <leader>df dVa{
-nnoremap <leader>yf yVa{
+" leader+z Select all lines within nearest curly braces block (inclusive)
+nnoremap <leader>v va{V
 
 " Ale previous/next
-nmap <silent> <leader>R <Plug>(ale_previous_wrap)
-nmap <silent> <leader>r <Plug>(ale_next_wrap)
+nmap <silent> <leader>W <Plug>(ale_previous_wrap)
+nmap <silent> <leader>w <Plug>(ale_next_wrap)
 
 " highlight last inserted text
 nnoremap gV `[v`]
@@ -324,7 +323,7 @@ nnoremap <leader>ct :let @*=expand("%:t")<CR>
 nnoremap <leader>ch :let @*=expand("%:p:h")<CR>
 
 nmap <leader>ff <Plug>CtrlSFPrompt
-nmap <leader>fw <Plug>CtrlSFPrompt<C-R><C-W>
+nmap <leader>fw <Plug>CtrlSFPrompt<C-R><C-W><CR>
 nnoremap <leader>fo :CtrlSFOpen<CR>
 
 " Usage - * then change word and then run
