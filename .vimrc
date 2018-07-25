@@ -183,6 +183,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Setup ctrlp"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build'
 let g:ctrlp_open_multiple_files = 'ij'
+if executable("ag")
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --depth 8 -g ""'
+endif
+
 " Do not fold markdown
 let g:vim_markdown_folding_disabled = 1
 " Do not conceal with JSON
