@@ -36,6 +36,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'djoshea/vim-autoread'
 Plug 'mattn/emmet-vim'
+Plug 'gaving/vim-textobj-argument'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
