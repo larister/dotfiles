@@ -49,6 +49,10 @@ set backspace=indent,eol,start
 set complete-=i
 set smarttab
 
+" Smartcase in search (lowercase is case insensitive)
+set ignorecase
+set smartcase
+
 " persistent undo
 set undofile                " Save undo's after file closes
 set undodir=$HOME/.vim/undo " where to save undo histories - MUST BE CREATED
