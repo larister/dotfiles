@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+function cleanup_git_branches() {
+    main_branch = $1 || "master"
+    ignore_regex = $2 || "master"
+
+    git fetch --all
+    echo Pruning remote branches
+    git remote | xargs git remote prune
+
+    BRANCHES=`git branch --merged master | grep -vE '$ignore_regex'`
+
+    if [ "$BRANCHES" == "" ]; then
+        echo
+        echo "*** No local branches to clean ***"
+        exit 1
+    fi
+    echo Deleting branches:
+    echo $BRANCHES
+
+    git branch --merged master | grep -vE '$ignore_regex' | xargs git branch -d
+}
