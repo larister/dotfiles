@@ -40,6 +40,9 @@ fi
 # Comment out when not working with node
 nod
 
+# Spark doesn't work with Java 10, so fix our java version to 1.8
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     eval "`dircolors -b`"
