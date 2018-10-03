@@ -32,6 +32,7 @@
 	enabled = true
 [core]
 	editor = vim
+	excludesfile = /Users/alastair/.gitignore_global
 [diff]
 	algorithm = patience
     compactionHeuristic = true
