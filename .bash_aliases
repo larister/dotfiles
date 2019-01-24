@@ -35,9 +35,9 @@ alias dc='docker-compose'
 alias dkr-clean='docker ps -aq | xargs docker rm -f && docker images --filter="dangling=true" -q | xargs docker rmi'
 alias dkr-blat='docker ps -aq | xargs docker rm -f && docker images -q | xargs docker rmi -f'
 
-alias gpg="gpg2"
+alias gpg2='gpg'
 
 alias jup="pipenv run jupyter notebook"
  
 # Activate nvm and use latest version of node
-alias nod="source ~/.nvm/nvm.sh && nvm use v8.9.2"
+alias nod="source ~/.nvm/nvm.sh && nvm use v8"

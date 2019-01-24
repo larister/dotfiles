@@ -20,9 +20,6 @@ export EDITOR=vim
 # Add keys to keychain
 ssh-add -A
 
-# GPG
-export GPG=gpg2
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
