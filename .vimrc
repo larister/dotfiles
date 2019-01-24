@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'isruslan/vim-es6'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
@@ -48,6 +49,8 @@ set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set smarttab
+
+set wildignore+=*/tmp*,*.sqp,*.zip,*/node_modules/*
 
 " Smartcase in search (lowercase is case insensitive)
 set ignorecase
@@ -127,6 +130,10 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
+let g:ctrlsf_auto_focus = {
+\ "at": "start"
+\ }
+
 " Remove JSHint from ale linters
 let g:ale_linters = {
 \    'javascript': ['eslint', 'flow', 'standard', 'prettier', 'prettier-eslint', 'xo']
@@ -187,8 +194,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Setup ctrlp"
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|build'
+" Setup ctrlp
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_root_markers = ['package.json']
 let g:ctrlp_open_multiple_files = 'ij'
 if executable("ag")
     let g:ctrlp_user_command = 'ag %s -l --nocolor --depth 8 -g ""'
