@@ -82,7 +82,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 PS1="$RED\$(date +%H:%M) \W$YELLOW \$(__git_ps1 '(%s)')$WHITE \$ "
 
 export PATH=~/bin:/usr/local/sbin:$PATH
-export PATH=~/scripts:$PATH
+export PATH=~/dotfiles/scripts:$PATH
 export PATH="$PATH:`yarn global bin`"
 
 export MARKPATH=$HOME/.marks
