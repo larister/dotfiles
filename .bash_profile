@@ -1,3 +1,8 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use 12
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Use rbenv - move to aliases?
 # eval "$(rbenv init -)"
 
@@ -33,9 +38,6 @@ shopt -s checkwinsize
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-# Comment out when not working with node
-nod
 
 # Spark doesn't work with Java 10, so fix our java version to 1.8
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home

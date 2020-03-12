@@ -37,6 +37,6 @@ alias gpg2='gpg'
 alias jup="pipenv run jupyter notebook"
  
 # Activate nvm and use latest version of node
-alias nod="source ~/.nvm/nvm.sh && nvm use v8"
+alias nod="source ~/.nvm/nvm.sh && nvm use v12.16.1"
 
 alias sgit="searchGitAliases $1"
