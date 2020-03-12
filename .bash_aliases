@@ -39,6 +39,6 @@ alias jup="pipenv run jupyter notebook"
 alias bwtoken="sh ~/dotfiles/scripts/access_token.sh"
  
 # Activate nvm and use latest version of node
-alias nod="source ~/.nvm/nvm.sh && nvm use v8"
+alias nod="source ~/.nvm/nvm.sh && nvm use v12.16.1"
 
 alias sgit="searchGitAliases $1"
