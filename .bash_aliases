@@ -1,7 +1,4 @@
 alias gs='git status'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias ga='git add'
 alias gd='git diff --patience'
 alias gdc='git diff --cached --patience'
 alias grh='git reset HEAD'
@@ -43,3 +40,5 @@ alias bwtoken="sh ~/dotfiles/scripts/access_token.sh"
  
 # Activate nvm and use latest version of node
 alias nod="source ~/.nvm/nvm.sh && nvm use v8"
+
+alias sgit="searchGitAliases $1"

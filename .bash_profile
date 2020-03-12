@@ -120,13 +120,18 @@ if [ -f '/Users/alastair/google-cloud-sdk/path.bash.inc' ]; then source '/Users/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/alastair/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alastair/google-cloud-sdk/completion.bash.inc'; fi
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 export PIP_REQUIRE_VIRTUALENV=true
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # ICU stuff
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"
 export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+# Load scm_breeze
+[ -s "/Users/alastair/.scm_breeze/scm_breeze.sh" ] && source "/Users/alastair/.scm_breeze/scm_breeze.sh"
+
+# So many damn shortcuts in scm_breeze, quickly find what's available (see aliases for quick version)
+function searchGitAliases {
+    git_aliases | ag "$1"
+}
