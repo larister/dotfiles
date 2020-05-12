@@ -42,3 +42,5 @@ alias nod="source ~/.nvm/nvm.sh && nvm use v12.16.1"
 alias sgit="searchGitAliases $1"
 
 alias orig="ag -g \.orig$ --depth -1 -U --ignore-dir node_modules"
+
+alias jira="node ~/dotfiles/scripts/jira.js"
