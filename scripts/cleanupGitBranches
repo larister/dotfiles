@@ -6,7 +6,7 @@ function cleanup_git_branches() {
 
     git fetch --all
     echo Pruning remote branches
-    git remote | xargs git remote prune
+    git remote prune origin
 
     BRANCHES=`git branch --merged master | grep -vE '$ignore_regex'`
 
@@ -20,3 +20,5 @@ function cleanup_git_branches() {
 
     git branch --merged master | grep -vE '$ignore_regex' | xargs git branch -d
 }
+
+cleanup_git_branches
