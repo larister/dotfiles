@@ -23,7 +23,7 @@ export HISTTIMEFORMAT="%F %T "
 export EDITOR=vim
 
 # Add keys to keychain
-ssh-add -A
+ssh-add --apple-load-keychain
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -137,3 +137,4 @@ export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 function searchGitAliases {
     git_aliases | ag "$1"
 }
+eval "$(/opt/homebrew/bin/brew shellenv)"
