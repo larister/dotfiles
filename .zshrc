@@ -109,6 +109,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias vizsh="vim ~/.zshrc"
+alias ls="exa --git --icons"
+alias lx="ls -lah"
+alias cat="bat"
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
