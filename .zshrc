@@ -114,5 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 [ -s "/Users/alastair/.scm_breeze/scm_breeze.sh" ] && source "/Users/alastair/.scm_breeze/scm_breeze.sh"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
