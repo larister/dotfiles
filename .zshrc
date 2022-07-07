@@ -115,6 +115,9 @@ alias lx="ls -lah"
 alias cat="bat"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
+## Git aliases
+alias grai="git rebase --autosquash --interactive"
+
 # Do not clear output after close
 export LESS='-X'
 
