@@ -21,6 +21,8 @@
 	fu = fetch upstream
 	please = push --force-with-lease
 	staash = stash --include-untracked
+[blame]
+    ignorerevsfile=.git-blame-ignore-revs
 [merge]
 	tool = bcomp
 [mergetool]
