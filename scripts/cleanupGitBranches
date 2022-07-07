@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
-
 function cleanup_git_branches() {
-    main_branch = $1 || "master"
-    ignore_regex = $2 || "master"
+    main_branch = $1 || "main"
+    ignore_regex = $2 || "main"
 
     git fetch --all
-    echo Pruning remote branches
-    git remote prune origin
 
-    BRANCHES=`git branch --merged master | grep -vE '$ignore_regex'`
+    BRANCHES=`git branch --merged main | grep -vE '$ignore_regex'`
 
     if [ "$BRANCHES" == "" ]; then
         echo
@@ -18,7 +15,5 @@ function cleanup_git_branches() {
     echo Deleting branches:
     echo $BRANCHES
 
-    git branch --merged master | grep -vE '$ignore_regex' | xargs git branch -d
+    git branch --merged main | grep -vE '$ignore_regex' | xargs git branch -d
 }
-
-cleanup_git_branches
