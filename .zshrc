@@ -79,7 +79,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm fzf fasd zsh-syntax-highlighting)
+plugins=(git nvm fzf fasd zsh-syntax-highlighting genpass)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,9 +114,11 @@ alias ls="exa --git --icons"
 alias lx="ls -lah"
 alias cat="bat"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias gensh="genpass-xkcd | cut -c1-24"
 
 ## Git aliases
 alias grai="git rebase --autosquash --interactive"
+alias gcf="git commit --fixup"
 
 # Do not clear output after close
 export LESS='-X'
