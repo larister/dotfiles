@@ -114,11 +114,13 @@ alias ls="exa --git --icons"
 alias lx="ls -lah"
 alias cat="bat"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias gensh="genpass-xkcd | cut -c1-24"
+alias gensh="genpass-xkcd | cut -c1-24 | pbcopy" 
 
 ## Git aliases
 alias grai="git rebase --autosquash --interactive"
 alias gcf="git commit --fixup"
+alias grom="git rebase origin/main"
+alias gromf="git fetch --all && git rebase origin/main"
 
 # Do not clear output after close
 export LESS='-X'
