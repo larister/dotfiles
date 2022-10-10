@@ -121,6 +121,7 @@ alias grai="git rebase --autosquash --interactive"
 alias gcf="git commit --fixup"
 alias grom="git rebase origin/main"
 alias gromf="git fetch --all && git rebase origin/main"
+alias gclean="git branch --merged | egrep -v main | xargs git branch -d"
 
 # Do not clear output after close
 export LESS='-X'
